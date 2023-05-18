@@ -5,12 +5,12 @@ using namespace std;
 
 void Input(int a[5][5]) {
 
-	for (int i = 0; i < 5; i++)
+	for (int iil = 0; iil < 5; iil++) // Ð¿Ð¾Ð¼ÐµÐ½ÑÐ»Ð° Ð¿ÐµÑ€ÐµÐ¼ÐµÐ½Ð½Ñ‹Ðµ
 	{
-		for (int j = 0; j < 5; j++)
+		for (int jjl = 0; jjl < 5; jjl++)
 		{
 			//cin >> a[i][j];
-			a[i][j] = rand() % 20;
+			a[iil][jjl] = rand() % 20;
 		}
 		cout << endl;
 	}
@@ -46,7 +46,7 @@ void Search(int a[5][5])
 			}
 			if (e == 5)
 			{
-				cout << i << " ñòðîêà ðàâíà " << i << " ñòîëáöó " << endl;
+				cout << i << " Ã±Ã²Ã°Ã®ÃªÃ  Ã°Ã Ã¢Ã­Ã  " << i << " Ã±Ã²Ã®Ã«Ã¡Ã¶Ã³ " << endl;
 			}
 		}
 		//cout << endl;
@@ -70,7 +70,7 @@ void Sum (int a[5][5])
 		}
 		if (j == 5)//idx == -1)
 		{
-			cout << "Îòðèöàòåëüíûõ ýëåìåíòîâ â " << i << " ñòðîêå íåò" << endl;
+			cout << "ÃŽÃ²Ã°Ã¨Ã¶Ã Ã²Ã¥Ã«Ã¼Ã­Ã»Ãµ Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã®Ã¢ Ã¢ " << i << " Ã±Ã²Ã°Ã®ÃªÃ¥ Ã­Ã¥Ã²" << endl;
 		}
 		else
 		{
@@ -79,7 +79,7 @@ void Sum (int a[5][5])
 				sum += a[i][j];
 				sum1 += a[i][j];
 			}
-			cout << "Ñóììà ýëåìåíòîâ â " << i << " ñòðîêå =" << sum;
+			cout << "Ã‘Ã³Ã¬Ã¬Ã  Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã®Ã¢ Ã¢ " << i << " Ã±Ã²Ã°Ã®ÃªÃ¥ =" << sum;
 			cout << endl;
 		}
 		cout << endl;
@@ -88,7 +88,7 @@ void Sum (int a[5][5])
 		sum = 0;
 	}
 
-	cout << "Îáùàÿ ñóììà ýëåìåíòîâ  " << sum1;
+	cout << "ÃŽÃ¡Ã¹Ã Ã¿ Ã±Ã³Ã¬Ã¬Ã  Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã®Ã¢  " << sum1;
 	cout << endl;
 }
 
@@ -98,7 +98,7 @@ void main()
 	setlocale(LC_ALL, "Russian");
 	int arr[5][5];
 	Input(arr);
-	//cout << "Èñõîäíûé ìàññèâ : " << endl;
+	//cout << "ÃˆÃ±ÃµÃ®Ã¤Ã­Ã»Ã© Ã¬Ã Ã±Ã±Ã¨Ã¢ : " << endl;
 	//Output(arr);
 	//Search(arr);
 	//Sum(arr);
@@ -107,12 +107,12 @@ void main()
 
 	FILE* fout;
 	fopen_s(&fout, "cpp.txt", "wt");
-	fprintf(fout, "%d", arr[0][0]);//ïå÷àòü â ôàéë
+	fprintf(fout, "%d", arr[0][0]);//Ã¯Ã¥Ã·Ã Ã²Ã¼ Ã¢ Ã´Ã Ã©Ã«
 	fclose(fout);
 	
 	FILE* fin;
 	fopen_s(&fin, "cpp.txt", "rt");
-	fscanf(fin, "%d", &arr[0][0]);//÷òåíèå èç ôàéëà
+	fscanf(fin, "%d", &arr[0][0]);//Ã·Ã²Ã¥Ã­Ã¨Ã¥ Ã¨Ã§ Ã´Ã Ã©Ã«Ã 
 	
 		
 
