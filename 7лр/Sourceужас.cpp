@@ -4,10 +4,11 @@
 using namespace std;
 
 void Input(int a[5][5]) {
-
-	for (int iil = 0; iil < 5; iil++) // поменяла переменные
+	int iil; // объявила переменные на каждой новой строке, iil - переменная счетчик
+	int jjl; // переменная-счетчик
+	for (iil = 0; iil < 5; iil++) // поменяла переменные
 	{
-		for (int jjl = 0; jjl < 5; jjl++)
+		for (jjl = 0; jjl < 5; jjl++)
 		{
 			//cin >> a[i][j];
 			a[iil][jjl] = rand() % 20;
