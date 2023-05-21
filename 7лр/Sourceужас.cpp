@@ -2,7 +2,6 @@
 //#include <stdio.h>
 //#include <fstream>
 using namespace std;
-
 void Input(int a[5][5]) {
 	int iil; // объявила переменные на каждой новой строке, iil - переменная счетчик
 	int jjl; // переменная-счетчик
@@ -15,15 +14,14 @@ void Input(int a[5][5]) {
 		}
 		cout << endl;
 	}
-	
-	//return arr;
 }
 
 void Output(int a[5][5]) {
-
-	for (int i = 0; i < 5; i++)
+	int i; // объявила переменные на каждой новой строке
+	int j;
+	for (i = 0; i < 5; i++)
 	{
-		for (int j = 0; j < 5; j++)
+		for (j = 0; j < 5; j++)
 		{
 			cout << a[i][j];
 			cout << '\t';
@@ -104,8 +102,6 @@ void main()
 	//Search(arr);
 	//Sum(arr);
 	
-
-
 	FILE* fout;
 	fopen_s(&fout, "cpp.txt", "wt");
 	fprintf(fout, "%d", arr[0][0]);//ïå÷àòü â ôàéë
